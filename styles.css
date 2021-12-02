@@ -17,6 +17,10 @@ body {
       justify-content: center;
 }
 
+#input-date {
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
 #countdown {
       display: inline;
       margin: 20px 0;

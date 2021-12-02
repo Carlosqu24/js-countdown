@@ -1,41 +1,3 @@
-export function countdownMidnight(futureDate, elemento) {
-      let future = new Date(futureDate);
-      
-      let futureDays = future.toUTCString();
-      let futureHours = future.getHours();
-      let futureMinutes = future.getMinutes();
-      let futureSeconds = future.getSeconds();
-
-      let now = new Date();
-
-      let nowInfo = now.toLocaleTimeString()
-      // let nowHours = now.getHours();
-      let nowHours = now.getHours();
-      let nowMinutes = now.getMinutes()
-      let nowSeconds = now.getSeconds();
-
-      $countdown.innerHTML = `
-            <div class="time">
-                  <span>${formatNumber(futureHours - nowHours)}</span>:<span>${formatNumber(futureMinutes - nowMinutes)}</span>:<span>${formatNumber(futureSeconds - nowSeconds)}</span>
-            </div>
-            <div class="info">
-                  <span>${nowInfo}</span>
-            </div>
-      `;
-}
-
-function formatNumber(number) {
-
-      let numberString = number.toString();
-      
-      if (numberString.length <= 1) {
-            const newStr = numberString.replace(number, `0${number}`)
-            
-            return newStr;
-      } else 
-            return numberString
-};
-
 export function countdown(element, limitDate) {
       const $countdown = document.querySelector(element);
 
@@ -49,7 +11,7 @@ export function countdown(element, limitDate) {
       let minutes = Math.floor(differenceTime % (1000 * 60 * 60) / (1000 * 60));
       let seconds = Math.floor(differenceTime % (1000 * 60) / (1000));
 
-      $countdown.classList.add("is-active")
+      $countdown.classList.add("is-active");
 
       $countdown.innerHTML = `
             <div class="days">${days} days</div>
@@ -70,4 +32,12 @@ export function countdown(element, limitDate) {
                   </span>
             </div>
       `;
+};
+
+export function validateInput(dateValue) {
+      if (dateValue == "") {
+            return false;
+      };
+
+      return true;
 };

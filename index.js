@@ -1,4 +1,4 @@
-import { countdown } from "./js/countdown.js";
+import { countdown, validateInput } from "./js/countdown.js";
 
 // VARIEABLES
 const $inputDate = document.querySelector('#input-date');
@@ -10,7 +10,16 @@ let interval;
 
 // EVENTS
 $btnStartCountdown.addEventListener('click', () => {
-      interval = setInterval(() => countdown('#countdown', $inputDate.value), 1000);
+
+      if (validateInput($inputDate.value)) {
+            interval = setInterval(() => {
+
+                  countdown('#countdown', $inputDate.value);
+      
+            }, 1000);
+      } else {
+            alert("Elija una fecha");
+      };
 });
 
 $btnStopCountdown.addEventListener('click', () => {

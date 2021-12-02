@@ -17,6 +17,51 @@ body {
       justify-content: center;
 }
 
+/* MODAL */
+#modal {
+      width: 300px;
+      position: fixed;
+      /* display: none; */
+      top: 0;
+      left: -500px;
+      margin: 20px 0 0 20px;
+      padding: 1rem;
+
+      /* background: #fff; */
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+      transition: all 0.3s ease;
+}
+
+#modal.active {
+      display: block;
+      left: 0;
+}
+
+.success {
+      background: rgb(58, 138, 62);
+      color: #fff;
+}
+
+.error {
+      background: rgb(151, 26, 26);
+      color: #fff;
+}
+
+.modal__header {
+      width: 100%;
+      margin-bottom: 15px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+
+
+
+
+
 #input-date {
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }

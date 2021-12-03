@@ -1,3 +1,14 @@
+:root {
+      /* LIGHT THEME */
+      --bg--light-theme: rgb(228, 228, 228);
+      --color--light-theme: #000;
+
+      /* DARK THEME */
+      --bg--dark-theme: rgb(19, 19, 19);
+      --color--dark-theme: rgb(255, 255, 255);
+}
+
+
 * {
       margin: 0;
       padding: 0;
@@ -9,13 +20,37 @@
 body {
       height: 100vh;
 
-      background: rgb(228, 228, 228);
+      /* background: rgb(228, 228, 228); */
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 }
+
+.light-theme {
+      background: var(--bg--light-theme);
+      color: var(--color--light-theme);
+}
+
+.dark-theme {
+      background: var(--bg--dark-theme);
+      color: var(--color--dark-theme);
+}
+
+/* ---------------------- THEMES -------------------------- */
+.themes * {
+      display: inline;
+}
+
+.themes #light-theme {
+      
+}
+
+.themes #dark-theme {
+      
+}
+
 
 /* MODAL */
 #modal {
@@ -66,6 +101,11 @@ body {
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+#input-date.dark-theme {
+      box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+
 #countdown {
       display: inline;
       margin: 20px 0;
@@ -87,8 +127,14 @@ body {
       width: 400px;
       height: 400px;
 
-      background: rgb(255, 255, 255);
+      /* background: rgb(255, 255, 255); */
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#countdown.dark-theme{
+  background: rgb(12, 20, 54);  
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;  
+  color: #fff;
 }
 
 .days {
@@ -121,17 +167,6 @@ body {
       
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .group {
       margin-bottom: 20px;
 }
@@ -145,8 +180,15 @@ input {
       font-size: 16px;
 }
 
+.btn.dark-theme,
+input.dark-theme {
+      background: rgb(12, 20, 54);   
+      box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+      color: #fff;
+}
+
 .btn {
-      background: rgb(255, 255, 255);
+      /* background: rgb(255, 255, 255); */
       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
       font-weight: bold;

@@ -16,24 +16,29 @@
             rel="stylesheet">
 </head>
 
-<body>
+<body data-theme="dark-theme">
 
       <div id="modal"></div>
 
+      <div class="themes">
+            <button id="light-theme">Light</button>
+            <button id="dark-theme">Dark</button>
+      </div>
+
       <form class="form">
             <div class="input-group">
-                  <input id="input-date" type="datetime-local">
+                  <input data-theme="dark-theme" id="input-date" type="datetime-local">
             </div>
       </form>
 
-      <div id="countdown"></div>
+      <div id="countdown" data-theme="dark-theme"></div>
 
       <div class="group">
-            <button id="startCountdown" class="btn">
+            <button data-theme="dark-theme" id="startCountdown" class="btn">
                   Start
             </button>
 
-            <button class="btn" id="stopCountdown">
+            <button data-theme="dark-theme" class="btn" id="stopCountdown">
                   Stop
             </button>
       </div>

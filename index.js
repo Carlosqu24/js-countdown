@@ -15,8 +15,8 @@ let interval;
 
 // EVENTS
 document.addEventListener("DOMContentLoaded", e => {
-      
-})
+      changeTheme("light-theme");
+});
 
 document.addEventListener("click", e => {
       if (e.target == $btnStartCountdown) {

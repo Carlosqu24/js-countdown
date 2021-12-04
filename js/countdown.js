@@ -41,3 +41,13 @@ export function validateInput(dateValue) {
 
       return true;
 };
+
+export function resetCountdown(interval, input, countdownSelector) {
+      clearInterval(interval);
+
+      input.value = "";
+
+      document.querySelector(countdownSelector).classList.remove("is-active");
+      document.querySelector(countdownSelector).innerHTML = "";
+
+}

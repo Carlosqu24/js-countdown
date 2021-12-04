@@ -1,4 +1,4 @@
-import { countdown, validateInput } from "./js/countdown.js";
+import { countdown, validateInput, resetCountdown } from "./js/countdown.js";
 import { displayModal } from "./js/modal.js"
 import { changeTheme } from "./js/themes.js";
 
@@ -7,6 +7,7 @@ const $inputDate = document.querySelector('#input-date');
 
 const $btnStartCountdown = document.querySelector('#startCountdown');
 const $btnStopCountdown = document.querySelector('#stopCountdown');
+const $btnResetCountdown = document.querySelector('#resetCountdown')
 
 const $btnLightTheme = document.querySelector("#light-theme");
 const $btnDarkTheme = document.querySelector("#dark-theme");
@@ -56,6 +57,10 @@ document.addEventListener("click", e => {
 
       if (e.target == $btnStopCountdown) {
             clearInterval(interval);
+      };
+
+      if (e.target == $btnResetCountdown) {
+            resetCountdown(interval, $inputDate, "#countdown")
       };
 
       if (e.target == $btnDarkTheme) changeTheme(e.target.id)
